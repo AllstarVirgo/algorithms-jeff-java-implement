@@ -1,7 +1,7 @@
 package recursion;
 
 /**
- * @author 01377809
+ * @author potato
  */
 public class QuickSort {
     public void quickSort(int[] array) {
