@@ -40,4 +40,12 @@ class NQueensTest {
         return legal;
     }
 
+    @Test
+    void testChar(){
+        char a ='a';
+        char b = (char)(a+1);
+        String s = "s";
+        System.out.println(b);
+    }
+
 }
