@@ -4,7 +4,7 @@ public class LIS {
     public int lis1(int prev,int index,int[] array){
         if(index == array.length)
             return 0;
-        if(array[index]<array[prev]){
+        if(array[index]<=array[prev]){
             return lis1(prev,index+1,array);
         }else {
             int skip = lis1(prev,index+1,array);

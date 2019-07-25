@@ -17,6 +17,3 @@ public class Splittable {
     }
 }
 
-interface Dic{
-    boolean isWord(String s);
-}
