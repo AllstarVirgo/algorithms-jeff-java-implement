@@ -26,8 +26,8 @@ class LISTest {
 
     @Test
     void lis3(){
-        int[] test = {2,2,3,6,7,3};
-        assertEquals(4,lisDP.lIS(wrapper(test)));
+        int[] test = {1,2,3,7,6,7,3};
+        assertEquals(5,lisDP.lisDP2(wrapper(test)));
     }
 
     static int[] wrapper(int[] array){

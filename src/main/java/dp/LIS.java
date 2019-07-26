@@ -31,4 +31,29 @@ public class LIS {
         }
         return lISTable[0][1];
     }
+
+
+    /**
+     * lisFirst(i) denotes the num of the lis A[i...n]
+     * lisFirst(i) = 1 + max{lisFirst(j)|j>i and A[j]>A[i]}
+     * @param array
+     * @return
+     */
+    public int lisDP2(int[] array){
+        int len = array.length;
+        int[] lisArray = new int[len+1];
+        lisArray[len] = 0;
+        for (int i = len-1; i >=0 ; i--) {
+            int max = 0;
+            for (int j = i+1; j < len; j++) {
+                int tempMax = 1;
+                if(array[j]>array[i])
+                    tempMax = 1+lisArray[j];
+                if(tempMax>max)
+                    max = tempMax;
+            }
+            lisArray[i] = max;
+        }
+        return lisArray[0]-1;
+    }
 }
