@@ -4,10 +4,11 @@ package dp;
  * @author potato
  * @Date 2019/7/19 8:51
  */
-public class LIS {
+public class
+LIS {
     /**
      * LISbigger(i, j), which
-     * we defined as the length of the longest increasing subsequence of A[ j .. n] in
+     * we defined as the length of the longest increasing sub sequence of A[ j .. n] in
      * which every element is larger than A[i].
      *
      * @param array
