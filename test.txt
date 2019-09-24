@@ -1,0 +1,7 @@
+<Response>
+<MDN>0982684444</MDN>
+<RtnDateTime>20100601123003</RtnDateTime>
+<TaskID>20100608181004517001</TaskID>
+<Code>0</Code>
+<Reason>成功</Reason>
+</Response>
