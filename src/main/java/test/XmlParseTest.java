@@ -50,9 +50,14 @@ public class XmlParseTest {
             //一级节点
             Element row = (Element) it.next();
             //一级节点迭代器
-
-            //取值
-            map.put(row.getName(), row.getStringValue());
+            if("Body".equals(row.getName())) {
+                //取值
+                Iterator subNodes = row.elementIterator();
+                while (subNodes.hasNext()) {
+                    Element subNode = (Element)subNodes.next();
+                    map.put(subNode.getName(), subNode.getStringValue());
+                }
+            }
 
         }
         for (String key :

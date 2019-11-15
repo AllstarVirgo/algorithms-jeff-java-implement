@@ -27,8 +27,11 @@ public class AllocationTest {
         allocation2 = new byte[4 * _1MB];
         allocation3 = new byte[4 * _1MB];
         allocation3 = null;
+        System.gc();
         allocation3 = new byte[4 * _1MB];
+        System.out.println("allocation3: " );
     }
+
 
     public static void main(String[] args) {
 //        testPretenureSizeThreshold();

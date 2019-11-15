@@ -1,7 +1,1 @@
-<Response>
-<MDN>0982684444</MDN>
-<RtnDateTime>20100601123003</RtnDateTime>
-<TaskID>20100608181004517001</TaskID>
-<Code>0</Code>
-<Reason>成功</Reason>
-</Response>
+<env:Envelope xmlns:env='http://schemas.xmlsoap.org/soap/envelope/'><env:Header></env:Header><env:Body><Response><Reason>成功</Reason><Code>0</Code><MDN>0906907888</MDN><TaskID>20191008201446oI3701</TaskID><RtnDateTime>20191008201447</RtnDateTime></Response></env:Body></env:Envelope>
