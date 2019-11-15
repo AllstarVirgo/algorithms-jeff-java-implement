@@ -1,5 +1,7 @@
 package jvm;
 
+import java.lang.ref.WeakReference;
+
 /**
  * @author potato
  * @Date 2019/9/23 9:09
@@ -27,14 +29,41 @@ public class AllocationTest {
         allocation2 = new byte[4 * _1MB];
         allocation3 = new byte[4 * _1MB];
         allocation3 = null;
-        System.gc();
         allocation3 = new byte[4 * _1MB];
-        System.out.println("allocation3: " );
+    }
+
+
+    @SuppressWarnings("unused")
+    public static void testTenuringThreshold2() {
+        byte[] allocation1, allocation2, allocation3, allocation4;
+        allocation1 = new byte[_1MB / 4];   // allocation1+allocation2大于survivo空间一半
+        allocation2 = new byte[_1MB / 4];
+        allocation3 = new byte[4 * _1MB];
+        allocation4 = new byte[5 * _1MB];
+        allocation4 = null;
+        allocation4 = new byte[8 * _1MB];
+    }
+
+    @SuppressWarnings("unused")
+    public static void testHandlePromotion() {
+        byte[] allocation1, allocation2, allocation3, allocation4, allocation5, allocation6, allocation7;
+        allocation1 = new byte[2 * _1MB];
+        allocation2 = new byte[2 * _1MB];
+        allocation3 = new byte[2 * _1MB];
+        allocation1 = null;
+        allocation4 = new byte[2 * _1MB];
+        allocation5 = new byte[2 * _1MB];
+        allocation6 = new byte[2 * _1MB];
+        allocation4 = null;
+        allocation5 = null;
+        allocation6 = null;
+        allocation7 = new byte[2 * _1MB];
     }
 
 
     public static void main(String[] args) {
 //        testPretenureSizeThreshold();
-        testTenuringThreshold();
+//        testTenuringThreshold2();
+        testHandlePromotion();
     }
 }
