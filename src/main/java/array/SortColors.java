@@ -6,28 +6,25 @@ package array;
  */
 public class SortColors {
     /**
-     * Input: [2,0,2,1,1,0]
-     * Output: [0,0,1,1,2,2]
-     * It is hard to define what is a "one-pass" solution but this algorithm is bounded by O(2n),
-     * meaning that at most each element will be seen and operated twice (in the case of all 0s).
-     * You may be able to write an algorithm which goes through the list only once, but each step
-     * requires multiple operations, leading the total operations larger than O(2n).
-     *
+     * 未能独立完成。
+     * 疑难点：先判断0，后判断2，判断2的时候，将后面的0换到前面来，i++,将导致miss掉对0的判断
+     *       先判断2，后判断0，判断2的时候，将后面的2换到前面来，导致miss对2 或者1 的判断
+     * 解决方案：判断2之后，i回退一次即可
      * @param nums
      */
     public void sortColors(int[] nums) {
         if (nums.length == 0) return;
         int p0 = 0, p2 = nums.length - 1;
         int i = 0;
-        while (i <= p2 && p0 <= p2) {
-            while (nums[i] == 2 && p0 <= p2) {
-                exchange(nums, p2, i);
-                p2--;
-            }
-            i++;
-            while (nums[i] == 0 && p0 <= p2) {
+        while (i <= p2) {
+            if (nums[i] == 0) {
                 exchange(nums, p0, i);
                 p0++;
+            }
+            if (nums[i] == 2) {
+                exchange(nums, p2, i);
+                p2--;
+                i--;
             }
             i++;
         }
