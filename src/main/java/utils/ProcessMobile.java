@@ -9,6 +9,7 @@ import java.util.Set;
  * @Date 2019/9/24 10:07
  */
 public class ProcessMobile {
+
     public static void processFile( ) throws IOException {
         BufferedReader bufferedReader = null;
         BufferedWriter bufferedWriter = null;
@@ -39,7 +40,8 @@ public class ProcessMobile {
     }
 
     public static void main(String[] args) throws IOException {
-        processFile();
+       String test = "123";
+        System.out.println(test.substring(0,1));
     }
 
     public static String processLine(String line){
