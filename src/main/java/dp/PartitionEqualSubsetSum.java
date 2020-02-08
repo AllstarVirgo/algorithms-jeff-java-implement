@@ -60,5 +60,6 @@ public class PartitionEqualSubsetSum {
                     dp[i][j] = dp[i][j] | dp[i - 1][j - nums[i]];
             }
         }
+        return dp[n][sum];
     }
 }
