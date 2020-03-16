@@ -43,8 +43,7 @@ public class LRUCache {
         curHead.prev = node;
     }
 
-    public void
-    put(int key, int value) {
+    public void put(int key, int value) {
         Node newNode = new Node(key,value);
 
         if(hashMap.containsKey(key)){
