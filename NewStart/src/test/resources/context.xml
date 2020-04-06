@@ -1,7 +1,0 @@
-<beans xmlns="http://www.springframework.org/schema/beans">
-    <bean id="test" class="SimpleIOC.TestBean">
-        <property name="testField1" value="test1"/>
-        <property name="testField2" value="test2"/>
-        <property name="testField3" value="test3"/>
-    </bean>
-</beans>
