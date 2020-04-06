@@ -1,6 +1,5 @@
 package leetcode;
 
-
 import java.util.Random;
 
 /**

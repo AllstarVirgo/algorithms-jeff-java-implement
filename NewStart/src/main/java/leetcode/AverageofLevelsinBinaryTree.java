@@ -3,6 +3,7 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import tree.TreeNode;
 
 /**
@@ -35,7 +36,7 @@ public class AverageofLevelsinBinaryTree {
                     tempCount++;
                 }
                 if(node.right!=null) {
-                    queue.offer(root.right);
+                    queue.offer(node.right);
                     tempCount++;
                 }
                 i++;
